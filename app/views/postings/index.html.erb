@@ -1,0 +1,18 @@
+<div class="container postings">
+  <div class="col-md-12">
+    <% @postings.each do |posting| %> 
+      <div class="row">
+        <div class="clear">
+            <p class="align-left company-name"><a href="<%= posting.link %>"><strong><%= posting.company %></strong></a> is hiring - <%= posting.position %></p>
+            <p class="align-right city-name"><%= posting.city %></p>
+            <br />
+        </div>  
+        <div class="col-md-12">
+          <div class="row">
+            <div class="clear"><i><%= posting.description %></i></div>
+          </div> 
+        </div>
+      </div>
+    <% end %> 
+  </div>
+</div>
